@@ -14,17 +14,29 @@ function pushSomething() {
     if (inputElement.value.length == 0) {
         alert('Please Enter A Task!')
     } else {
-        tasks.innerHTML += `
-        <div class='taskBlock'>
-            <label class="task">
-                <input type="checkbox" class="checkbox">
-                <span class="taskValue">${inputElement.value}</span>
-            </label> 
-            <button class="delete">
-                <i class="far fa-trash-alt"></i>    
-            </button>
-        </div>
-        `
+        const d = document.createElement('div')
+        const l = document.createElement('label')
+        const ip = document.createElement('input')
+        const s = document.createElement('span')
+        const b = document.createElement('button')
+        const i = document.createElement('i')
+
+        ip.type = 'checkbox'
+        ip.className = 'checkbox'
+        ip.checked = false
+        s.className = 'taskValue'
+        s.appendChild(document.createTextNode(inputElement.value))
+        l.className = 'task'
+        l.appendChild(ip)
+        l.appendChild(s)
+        i.className = 'far fa-trash-alt'
+        b.className = 'delete'
+        b.appendChild(i)
+        d.className = 'taskBlock'
+        d.appendChild(l)
+        d.appendChild(b)
+
+        tasks.appendChild(d)
         inputElement.value = ''
     }
     clickEvent()
@@ -36,9 +48,9 @@ function clickEvent() {
 
     // Checkbox
     for (let i = 0; i < current_Tasks.length; i++) {
-        current_Tasks[i].onmouseup = function () {
+        current_Tasks[i].onclick = function () {
             current_Tasks[i].classList.toggle('checked')
-            console.log(buttonElement[i].checked)
+            console.log(current_Tasks[i])
         }
 
 
