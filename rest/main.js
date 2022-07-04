@@ -34,6 +34,7 @@ Promise.all ([
     .then ((data) => {
         data.comments.forEach(comment => {
             let user = data.users.find((user) => { 
+                
                 return user.id == comment.user_id
             })
             html += `<li>${user.name}: ${comment.content}</li>`
