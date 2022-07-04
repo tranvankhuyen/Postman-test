@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Khuyen Tran"
+    },
+    {
+      "id": 2,
+      "name": "Van Khanh"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "content": "ABCXYZ!"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "content": "XYZCBA!"
+    },
+    {
+      "user_id": "2",
+      "content": "test",
+      "id": 3
+    },
+    {
+      "user_id": "2",
+      "content": "test",
+      "id": 4
+    },
+    {
+      "user_id": "2",
+      "content": "test",
+      "id": 5
+    },
+    {
+      "user_id": "1",
+      "content": "test",
+      "id": 6
+    },
+    {
+      "user_id": "1",
+      "content": "test",
+      "id": 7
+    },
+    {
+      "user_id": "1",
+      "content": "test",
+      "id": 8
+    }
+  ]
+}
